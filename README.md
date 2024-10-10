@@ -1,7 +1,7 @@
 # **Requests Dataset for Digital Assistant Evaluation**
 
 ## **Overview**
-This dataset was synthesized for evaluating the performance of DA4DTE. The objective is to test how accurately the assistant can classify user requests into predefined categories and trigger the correct engine to handle each request.
+This dataset was synthesized for evaluating the performance of DA4DTE in engine selection. The objective is to test how accurately the assistant can classify user requests into predefined categories and trigger the correct engine to handle each request.
 
 ## **Dataset Structure**
 - **Total Categories**: 7
@@ -33,17 +33,22 @@ Example:
 
 ## **Pre-existing Datasets Used for Synthesis**
 The requests in this dataset were inspired by and/or derived from the following pre-existing datasets:
-- **Dataset 1**: [GeoQuestions1089](URL) - Explanation of how this dataset contributed (e.g., request formulation, category design, etc.)
-- **Dataset 2**: [RSVQAxBEN](URL) - Explanation...
-- **Dataset 3**: [Dataset Name](URL) - Explanation...
+- **Dataset 1**: [GeoQuestions1089](https://github.com/AI-team-UoA/GeoQuestions1089) - Explanation of how this dataset contributed (e.g., request formulation, category design, etc.)
+- **Dataset 2**: [RSVQAxBEN](https://rsvqa.sylvainlobry.com/) - Explanation...
+- **Dataset 3**: [Vessel Captioning Dataset] : captions of the images, used to train the *Image Retreival by Caption* Engine.
 
-  Two subsets of GeoQuestions1089 [KPT+23], one as is and the other with modifications, were used for the ‘geospatial’ and ‘search by metadata’ categories, respectively. Three subsets of RSVQAxBEN [LDT21] were used for the ‘binary visual QA’, ‘image segmentation’, and ‘object counting’ categories. Some of the image captions in the vessel captioning dataset were used to formulate ‘search by caption’ requests. For the search by image case, we used paraphrases of “Retrieve {X} similar images to this one”. The validation dataset consists of 15 requests per category (105 in total). 
 
 ### **Contribution from Pre-existing Datasets**
-The synthesis process for this dataset involved:
-1. Sampling relevant request types from the pre-existing datasets.
-2. Adapting requests to fit the specific goal of testing the assistant's response accuracy across different scenarios.
-3. Augmenting and balancing the dataset to ensure diversity across all categories.
+- Two subsets of GeoQuestions1089, one as is and the other with modifications, were used for the *Geospatial QA* and *Image Retrieval by Metadata* categories, respectively.
+Examples:
+
+- Three subsets of RSVQAxBEN were used for the *Visual QA (binary)*, *Image Segmentation*, and *Object counting* categories.
+Examples:
+
+- Some of the image captions in the vessel captioning dataset were used to formulate ‘search by caption’ requests.
+Examples:
+
+- For the search by image case, we used paraphrases of “Retrieve {X} similar images to this one”.
 
 ## **Usage**
 This dataset is designed for use in the evaluation and fine-tuning of digital assistants. Some potential use cases include:
