@@ -32,63 +32,31 @@ Example:
 ```
 
 ## **Pre-existing Datasets Used for Synthesis**
-The requests in this dataset were inspired by and/or derived from the following pre-existing datasets:
-- **Dataset 1**: [GeoQuestions1089](https://github.com/AI-team-UoA/GeoQuestions1089) - Explanation of how this dataset contributed (e.g., request formulation, category design, etc.)
-- **Dataset 2**: [RSVQAxBEN](https://rsvqa.sylvainlobry.com/) - Explanation...
-- **Dataset 3**: [Vessel Captioning Dataset] : captions of the images, used to train the *Image Retreival by Caption* Engine.
+
+- [GeoQuestions1089](https://github.com/AI-team-UoA/GeoQuestions1089) : triples of geospatial questions, their answers, and the respective SPARQL/GeoSPARQL queries, targeting the Knowledge Graph YAGO2geo.
+- [RSVQAxBEN](https://rsvqa.sylvainlobry.com/) : visual question answering dataset for BigEarthNet images.
+- **Vessel Captioning Dataset** : images and their captions used to train the *Image Retreival by Caption* Engine of the DA4DTE.
 
 
 ### **Contribution from Pre-existing Datasets**
-- Two subsets of GeoQuestions1089, one as is and the other with modifications, were used for the *Geospatial QA* and *Image Retrieval by Metadata* categories, respectively.
-Examples:
-
+- Two subsets of GeoQuestions1089, one as is and the other with modifications, were used for the *Geospatial QA* and *Image Retrieval by Metadata* categories, respectively
 - Three subsets of RSVQAxBEN were used for the *Visual QA (binary)*, *Image Segmentation*, and *Object counting* categories.
-Examples:
+- Some of the image captions in the vessel captioning dataset were used to formulate *Image Retrieval by Caption’ requests.
+- For the *Image Retrieval by Image* case, we used paraphrases of “Retrieve {X} similar images to this one”.
 
-- Some of the image captions in the vessel captioning dataset were used to formulate ‘search by caption’ requests.
-Examples:
+| **Pre-existing Dataset**    | **Category**                     | **Initial Query / Caption**                                                 | **Used Query / Request**                                                        |
+|----------------------------------------|----------------------------------------|:--------------------------------------------------------------:|:------------------------------------------------------:|
+|GeoQuestions1089| **Geospatial QA**                 | Which streams cross Oxfordshire?                               | *same as initial*                                       |
+| | **Image Retrieval by Metadata**   | What are the rivers of France?                   | Give me 5 pictures of rivers in France.           |
+|RSVQAxBEN| **Visual QA (binary)**            | Is a water area present?                                    | *same as initial*                                    |
+|| **Image Segmentation**            | What is the area covered by large buildings?                            | *same as initial*               |
+|| **Object Counting**               | How many meadows are there in the image?                              | *same as initial*              |
+|vessel captioning dataset| **Image Retrieval by Caption**    | one vessel located at the upper-right | Show me a satellite image with one vessel located at the upper-right.              |
+|none| **Image Retrieval by Image**      | *none*                    |           Obtain 10 images that closely resemble the one I offer.           |
 
-- For the search by image case, we used paraphrases of “Retrieve {X} similar images to this one”.
 
 ## **Usage**
-This dataset is designed for use in the evaluation and fine-tuning of digital assistants. Some potential use cases include:
+This dataset is designed for use in the evaluation of the digital assistant, for the following tests:
 - **Intent Classification Testing**: Ensuring the digital assistant can correctly classify user intents across the provided categories.
 - **Response Evaluation**: Verifying that the assistant responds with appropriate actions for each request.
 - **Performance Benchmarking**: Comparing the performance of different models or versions of the assistant in handling diverse requests.
-
-### **Evaluation Metrics**
-The evaluation of model performance using this dataset can be conducted using standard classification metrics such as:
-- **Accuracy**: Proportion of correctly classified requests.
-- **Precision, Recall, F1-score**: Breakdown of performance per category.
-  
-Consider using tools like `scikit-learn` for evaluation if working in Python.
-
-## **License**
-Specify the license under which the dataset is made available. For example:
-- This dataset is released under the [MIT License](https://opensource.org/licenses/MIT). You are free to use, modify, and distribute it under the terms of the license.
-
-## **How to Cite This Dataset**
-If you use this dataset in your work, please cite it as:
-```
-Author Names, "Requests Dataset for Digital Assistant Evaluation", Year. Available at: [Link]
-```
-
----
-
-## **Contact Information**
-For any questions, suggestions, or issues regarding the dataset, please contact:
-- **Author Name**
-- **Email Address**
-- **Website (if applicable)**
-
----
-
-### **Optional Sections (if applicable)**
-
-- **Changelog**: If there are multiple versions of the dataset, include a changelog.
-- **Known Issues**: Any limitations or known issues with the dataset.
-- **Future Work**: Plans for expanding or improving the dataset.
-
----
-
-This template provides the key information that users need to understand and use the dataset effectively, while also crediting any sources that contributed to its synthesis. You can expand or remove sections based on your specific needs.
