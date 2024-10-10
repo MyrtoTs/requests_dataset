@@ -41,7 +41,7 @@ Example:
 ### **Contribution from Pre-existing Datasets**
 - Two subsets of GeoQuestions1089, one as is and the other with modifications, were used for the *Geospatial QA* and *Image Retrieval by Metadata* categories, respectively
 - Three subsets of RSVQAxBEN were used for the *Visual QA (binary)*, *Image Segmentation*, and *Object counting* categories.
-- Some of the image captions in the vessel captioning dataset were used to formulate *Image Retrieval by Caption’ requests.
+- Some of the image captions in the vessel captioning dataset were used to formulate *Image Retrieval by Caption* requests.
 - For the *Image Retrieval by Image* case, we used paraphrases of “Retrieve {X} similar images to this one”.
 
 | **Pre-existing Dataset**    | **Category**                     | **Initial Query / Caption**                                                 | **Used Query / Request**                                                        |
